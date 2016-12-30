@@ -1,7 +1,7 @@
 import pycrfsuite
 import sys
 import os
-import hw3_corpus_tool
+import get_corpus_tool
 import random
 
 class message_info:
@@ -31,7 +31,7 @@ def get_feature(path):
                 dict_to_utter = []
                 is_first_speaker = "first:isTrue"
                 dict_to_csv = []
-                dict_to_csv = hw3_corpus_tool.get_utterances_from_filename(root+"/"+file_name)
+                dict_to_csv = get_corpus_tool.get_utterances_from_filename(root+"/"+file_name)
                 first_speaker = ""
                 y_data = []
                 for i in range(0,len(dict_to_csv)):
@@ -71,7 +71,7 @@ def get_feature_with_name(path):
                 is_first_speaker = "first:isTrue"
                 speaker = ""
                 dict_to_csv = []
-                dict_to_csv = hw3_corpus_tool.get_utterances_from_filename(root+"/"+file_name)
+                dict_to_csv = get_corpus_tool.get_utterances_from_filename(root+"/"+file_name)
                 for i in range(0,len(dict_to_csv)):
                     utter_each = []
                     isChange = "isChange:isFalse"
